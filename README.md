@@ -1,5 +1,8 @@
 # site_nuxt
 
+### 服务端接口
+请切换分支：@/server
+
 ## Build Setup
 
 ```bash
