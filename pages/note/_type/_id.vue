@@ -36,7 +36,6 @@
 </template>
 
 <script>
-// import Markdown from 'markdown-it';
 import SvgFolder from '@/static/folader.svg?inline';
 import SvgNote from '@/static/note.svg?inline';
 import SvgClose from '@/static/close.svg?inline';
@@ -47,6 +46,7 @@ import '@/util/myMarkdown.scss'
 import { scrollTo, throttle } from '@/util/browser.js';
 import md from '@/util/interpretMd.js';
 import { stringAscll } from '@/util/string';
+import h1js from 'highlight.js/lib/core';
 export default {
 	async asyncData({ $axios, params, store, app }) {
 		if (store.state.noteLabel.length == 0) {
@@ -111,6 +111,9 @@ export default {
 		}
 	},
 	mounted () {
+		console.log(h1js.highlightAuto(`<pre><code>
+			var obj = 'hello'  // 注释
+		</code></pre>`))
 		this.getTitleAnchorLink();
 		if (document.body.offsetWidth < 1025) {
 			this.sidebarBool = false;
