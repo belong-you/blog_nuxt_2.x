@@ -1,5 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  srcDir: 'src/',
   head: {
     title: '嗝儿屁的博客',
     htmlAttrs: {

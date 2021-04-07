@@ -107,8 +107,11 @@ export default {
 		jumpScrollToY (e, num, id) {
 			scrollTo(num);
 			e.preventDefault();
-			console.log(this.$router)
+			// console.log(this.$router)
 		}
+	},
+	async fetch () {
+		console.log(3456)
 	},
 	mounted () {
 		console.log(h1js.highlightAuto(`<pre><code>
@@ -122,6 +125,7 @@ export default {
 	beforeRouteUpdate (to, from, next) {
 		if (to.path != from.path) next();
 	},
+	loading: false,
 	components: {
 		SvgFolder,
 		SvgNote,
@@ -204,6 +208,7 @@ export default {
 		}
 	}
 	.anchor-links{
+		font-size: 14px;
 		position: fixed;
 		top: 60px;
 		right: 0;

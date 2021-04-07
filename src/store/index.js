@@ -1,7 +1,7 @@
 import Vuex from 'vuex'
 
 export default {
-    state: {
+    state: () => ({
         noteLabel: []
-    },
+    }),
 }
