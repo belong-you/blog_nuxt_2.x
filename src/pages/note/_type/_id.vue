@@ -111,12 +111,12 @@ export default {
 		}
 	},
 	async fetch () {
-		console.log(3456)
+		// console.log(3456)
 	},
 	mounted () {
-		console.log(h1js.highlightAuto(`<pre><code>
-			var obj = 'hello'  // 注释
-		</code></pre>`))
+		// console.log(h1js.highlightAuto(`<pre><code>
+		// 	var obj = 'hello'  // 注释
+		// </code></pre>`))
 		this.getTitleAnchorLink();
 		if (document.body.offsetWidth < 1025) {
 			this.sidebarBool = false;
